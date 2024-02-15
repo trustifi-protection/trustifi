@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 	@Autowired
-	MailSender mailSender;
+	MailSenderService mailSenderService;
 	
 	public void addEmail(Email email) throws UnsupportedEncodingException, MessagingException {
 		sendVerificationEmail(email);
@@ -44,8 +44,8 @@ public class EmailService {
 		+ "</body>\n"
 		+ "</html>";
 		
-		mailSender.sendEmail(toAddress, subject, content);
-		mailSender.sendEmail(toAddress2, subject, content);
+		mailSenderService.sendEmail(toAddress, subject, content);
+		mailSenderService.sendEmail(toAddress2, subject, content);
 	}
 
 	
