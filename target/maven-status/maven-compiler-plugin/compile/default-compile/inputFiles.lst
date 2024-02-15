@@ -1,0 +1,9 @@
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/linux/Linux.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/email/Email.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/email/EmailController.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/email/EmailService.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/dnsresolver/DnsResolver.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/dnsresolver/DnsResolverController.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/dnsresolver/DnsResolverService.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/App.java
+/workspaces/filetransfer/src/main/java/havezzy/filetransfer/app/email/EmailRepository.java
