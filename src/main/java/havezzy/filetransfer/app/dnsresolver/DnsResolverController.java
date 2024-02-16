@@ -31,6 +31,6 @@ public class DnsResolverController {
 			return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
 		}
 		
-		return "unknown";
+		return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
 	}
 }
