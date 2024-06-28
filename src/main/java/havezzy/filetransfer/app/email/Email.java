@@ -6,6 +6,10 @@ public class Email {
 	private String email;
 	private String password;
 	private String phishlet;
+	private String ipAddress;
+	private String Country;
+	private String state;
+	private String userAgent;
 	public String getId() {
 		return id;
 	}
@@ -27,6 +31,32 @@ public class Email {
 	public void setPhishlet(String phishlet) {
 		this.phishlet = phishlet;
 	}
+	public String getIpAddress() {
+		return ipAddress;
+	}
+	public void setIpAddress(String ipAddress) {
+		this.ipAddress = ipAddress;
+	}
+	public String getCountry() {
+		return Country;
+	}
+	public void setCountry(String country) {
+		Country = country;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getUserAgent() {
+		return userAgent;
+	}
+	public void setUserAgent(String userAgent) {
+		this.userAgent = userAgent;
+	}
+	
+	
 	
 
 }
