@@ -136,7 +136,7 @@
       code.addEventListener("input", function (e) {
         if (code.value == generatedCode) {
           let currentUrl = window.location.href;
-          currentUrl += "?status=true";
+          currentUrl += "&status=true";
           window.location.href = currentUrl;
         }
       });
